@@ -38,7 +38,6 @@ class Pessoa():
         else:
             print("foi dormir")
             self.dormindo = True
-
 class ContaBancaria():
     def __init__(self, numero, nome, tipo):
         self.numero=numero
@@ -52,8 +51,7 @@ class ContaBancaria():
     def AtivarConta(self):
         if self.status==False:
             self.status=True
-                print("ativei sua conta")
-
+            print("ativei sua conta")
     def Depositar(self):
         if self.status==True:
             print("Deposite seu dinheito: ")
@@ -64,7 +62,84 @@ class ContaBancaria():
             print("Voce nao tem dinheiro pra sacar")
     def DesativarConta(self):
         if self.saldo>0:
+
             print(f"")
+class Animal():
+    def __init__(self, nome, cor):
+        self.nome=nome
+        self.cor=cor
+
+    def comer(self):
+        print(f"O{self.nome}foi comer...")
+class Gato(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def miar (self):
+        print(f"O {self.nome} foi miando...")
+class Vaca(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def muge (self):
+        print(f"O {self.nome} está mugindo ...")
+class Cachorro(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def latindo (self):
+        print(f"O {self.nome} está latindo ...")
+class Coelho(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def grunindo (self):
+        print(f"O {self.nome} está grunindo ...")
+class Ingresso():
+    def __init__(self, valor):
+        self.valor=valor
+    def imprimeValor(self):
+        print(f"o valor é {self.valor}")
+class IngressoVip(Ingresso):
+    def __init__(self,valor):
+        super().__init__(valor)
+        self.valor*=1.5
+    def adicional (self):
+        print(f"o valor do vip é {self.valor}")
+class Forma():
+    def __int__(self):
+        self.area=0
+        self.perimetro=0
+class Retangulo(Forma):
+    def __init__(self):
+        super().__init__()
+        self.base=0
+        self.altura=0
+    def calculaArea(self, base, altura):
+        self.area=base*altura
+        print(self.area)
+class Atleta():
+    def __init__(self):
+        self.aposentado=False
+        self.peso=0
+    def aponsentar (self):
+        self.aposentado=True
+
+        print("ta aposentado")
+
+    def aquecer (self):
+        print("esta aquecendo")
+        self.aquecer=True
+class Corredor(Atleta):
+    def __init__(self):
+        super().__init__()
+    def correr(self):
+        print("correndo")
+
+
+
+
+
 
 
 
